@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/Inside_View"
+        android:layout_width="316dp"
+        android:layout_height="606dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <TextView
+        android:id="@+id/Heading_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KILL RIGHT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#F00909"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/Inside_View"
+        app:layout_constraintEnd_toEndOf="@+id/Inside_View"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/Inside_View"
+        app:layout_constraintTop_toTopOf="@+id/Inside_View"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <EditText
+        android:id="@+id/Your_Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Your Guess"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/Inside_View"
+        app:layout_constraintEnd_toEndOf="@+id/Inside_View"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/Inside_View"
+        app:layout_constraintTop_toTopOf="@+id/Inside_View"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <Button
+        android:id="@+id/Submit_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#e0af1f"
+        android:text="SUBMIT"
+        android:textColor="#ff0006"
+        app:layout_constraintBottom_toBottomOf="@+id/Inside_View"
+        app:layout_constraintEnd_toEndOf="@+id/Inside_View"
+        app:layout_constraintStart_toStartOf="@+id/Inside_View"
+        app:layout_constraintTop_toTopOf="@+id/Inside_View"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <Button
+        android:id="@+id/Give_Up_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="GIVE UP"
+        android:background="#e0af1f"
+        android:textColor="#ff0006"
+        app:layout_constraintBottom_toBottomOf="@+id/Inside_View"
+        app:layout_constraintEnd_toEndOf="@+id/Inside_View"
+        app:layout_constraintStart_toStartOf="@+id/Inside_View"
+        app:layout_constraintTop_toBottomOf="@+id/Submit_Button"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <Button
+        android:id="@+id/Retry_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#e0af1f"
+        android:text="RETRY"
+        android:textColor="#ff0006"
+        app:layout_constraintBottom_toBottomOf="@+id/Inside_View"
+        app:layout_constraintEnd_toEndOf="@+id/Inside_View"
+        app:layout_constraintStart_toStartOf="@+id/Inside_View"
+        app:layout_constraintTop_toTopOf="@+id/Inside_View"
+        app:layout_constraintVertical_bias="0.652" />
+
+    <TextView
+        android:id="@+id/Number_of_Guesses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Number of incorrect guesses : 0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Inside_View"
+        app:layout_constraintEnd_toEndOf="@+id/Inside_View"
+        app:layout_constraintStart_toStartOf="@+id/Inside_View"
+        app:layout_constraintTop_toBottomOf="@+id/Retry_Button"
+        app:layout_constraintVertical_bias="0.743" />
+
+    <TextView
+        android:id="@+id/Higher_or_Lower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/Number_of_Guesses"
+        app:layout_constraintEnd_toEndOf="@+id/Inside_View"
+        app:layout_constraintStart_toStartOf="@+id/Inside_View"
+        app:layout_constraintTop_toBottomOf="@+id/Retry_Button" />
+
+    <TextView
+        android:id="@+id/Wrong_Answer_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/Your_Guess"
+        app:layout_constraintEnd_toEndOf="@+id/Inside_View"
+        app:layout_constraintStart_toStartOf="@+id/Inside_View"
+        app:layout_constraintTop_toBottomOf="@+id/Heading_Text" />
+
+    <TextView
+        android:id="@+id/Answer_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/Inside_View"
+        app:layout_constraintEnd_toEndOf="@+id/Inside_View"
+        app:layout_constraintStart_toStartOf="@+id/Inside_View"
+        app:layout_constraintTop_toTopOf="@+id/Inside_View" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
